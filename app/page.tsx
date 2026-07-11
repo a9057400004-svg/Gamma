@@ -28,8 +28,8 @@ export default function Home() {
     <main>
       <header className="header">
         <div className="container nav">
-          <a className="brand" href="#top" aria-label="МАГМА">
-            <Image src="/brand/logo.png" alt="Логотип МАГМА" width={88} height={88} priority />
+          <a className="brand" href="#top" aria-label="ГАММА">
+            <Image src="/brand/logo.png" alt="Логотип ГАММА" width={88} height={88} priority />
             <strong>МАГМА</strong>
           </a>
           <nav className="menu" aria-label="Навигация">
@@ -45,7 +45,7 @@ export default function Home() {
       <section className="hero" id="top">
         <div className="container hero-content">
           <div className="kicker">Студия покраски и реставрации</div>
-          <h1>МАГМА</h1>
+          <h1>ГАММА</h1>
           <div className="subtitle">Премиальная отделка мебели, дерева и металла</div>
           <p>Одинцово • Москва • Московская область • принимаем изделия транспортными компаниями</p>
           <div className="actions">
@@ -84,7 +84,7 @@ export default function Home() {
           <div className="grid gallery">
             {works.map((src, index) => (
               <a className="work" href={src} target="_blank" rel="noreferrer" key={src} aria-label={`Открыть работу ${index + 1}`}>
-                <Image src={src} alt={`Работа МАГМА ${index + 1}`} width={900} height={1100} />
+                <Image src={src} alt={`Работа ГАММА ${index + 1}`} width={900} height={1100} />
               </a>
             ))}
           </div>
@@ -94,7 +94,7 @@ export default function Home() {
       <section className="section">
         <div className="container">
           <div className="section-head">
-            <h2>Почему МАГМА</h2>
+            <h2>Почему ГАММА</h2>
             <p className="lead">Премиальный внешний вид начинается не с краски, а с подхода: подготовка, технология, аккуратность и контроль результата.</p>
           </div>
           <div className="grid stats">
@@ -139,7 +139,7 @@ export default function Home() {
 
       <footer className="footer">
         <div className="container">
-          <span>© МАГМА — студия покраски и реставрации</span>
+          <span>© ГАММА — студия покраски и реставрации</span>
           <span>Одинцово • Москва • Московская область</span>
         </div>
       </footer>
