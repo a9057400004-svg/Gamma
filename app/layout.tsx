@@ -1,22 +1,87 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import './globals.css';
 
 export const metadata: Metadata = {
   title: 'ГАММА — студия покраски и реставрации',
-  description: 'Премиальная покраска мебели, дерева, МДФ и металла. Реставрация мебели. Одинцово, Москва и Московская область.',
-  keywords: ['покраска мебели', 'реставрация мебели', 'покраска МДФ', 'покраска дерева', 'покраска металла', 'Одинцово'],
+  description:
+    'Премиальная покраска мебели, дерева, МДФ и металла. Реставрация мебели. Одинцово, Москва и Московская область.',
+  keywords: [
+    'покраска мебели',
+    'реставрация мебели',
+    'покраска МДФ',
+    'покраска дерева',
+    'покраска металла',
+    'Одинцово',
+  ],
   openGraph: {
     title: 'ГАММА — студия покраски и реставрации',
     description: 'Премиальная отделка мебели, дерева и металла.',
     type: 'website',
-    locale: 'ru_RU'
-  }
+    locale: 'ru_RU',
+  },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="ru">
-      <body>{children}</body>
+      <body>
+        {children}
+
+        <Script id="yandex-metrika" strategy="afterInteractive">
+          {`
+            (function(m,e,t,r,i,k,a){
+              m[i]=m[i]||function(){
+                (m[i].a=m[i].a||[]).push(arguments)
+              };
+              m[i].l=1*new Date();
+
+              for (var j = 0; j < document.scripts.length; j++) {
+                if (document.scripts[j].src === r) {
+                  return;
+                }
+              }
+
+              k=e.createElement(t);
+              a=e.getElementsByTagName(t)[0];
+              k.async=1;
+              k.src=r;
+              a.parentNode.insertBefore(k,a);
+            })(
+              window,
+              document,
+              'script',
+              'https://mc.yandex.ru/metrika/tag.js?id=110605040',
+              'ym'
+            );
+
+            ym(110605040, 'init', {
+              ssr: true,
+              webvisor: true,
+              clickmap: true,
+              ecommerce: 'dataLayer',
+              referrer: document.referrer,
+              url: location.href,
+              accurateTrackBounce: true,
+              trackLinks: true
+            });
+          `}
+        </Script>
+
+        <noscript>
+          <div>
+            <img
+              src="https://mc.yandex.ru/watch/110605040"
+              style={{ position: 'absolute', left: '-9999px' }}
+              alt=""
+            />
+          </div>
+        </noscript>
+      </body>
     </html>
   );
 }
