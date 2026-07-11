@@ -30,7 +30,7 @@ export default function Home() {
         <div className="container nav">
           <a className="brand" href="#top" aria-label="ГАММА">
             <Image src="/brand/logo.png" alt="Логотип ГАММА" width={88} height={88} priority />
-            <strong>МАГМА</strong>
+            <strong>ГАММА</strong>
           </a>
           <nav className="menu" aria-label="Навигация">
             <a href="#services">Услуги</a>
